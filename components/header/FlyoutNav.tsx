@@ -7,7 +7,7 @@ import { LogoSvg } from "./logoSvg";
 import styles from "./FlyoutNav.module.css";
 import Links from "./Links";
 import { HeaderContext } from "@/contexts/header-context";
-import ContactButton from "../OutlineButton/ContactButton";
+import ContactButton from "../buttons/OutlineButton/ContactButton";
 import MobileMenu from "./MobileMenu/MobileMenu";
 
 const FlyoutNav = () => {

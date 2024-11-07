@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
 import MobileMenuLink from "./MobileMenuLink";
-import ContactButton from "@/components/OutlineButton/ContactButton";
+import ContactButton from "@/components/buttons/OutlineButton/ContactButton";
 import { LINKS } from "../Links";
 import { LogoSvg } from "../logoSvg";
 import styles from "./MobileMenu.module.css";

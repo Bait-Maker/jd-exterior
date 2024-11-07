@@ -9,6 +9,7 @@
     border: none;
     background-color: transparent;
     color: var(--primary-content);
+    margin-right: 2rem;
 }
 
 .motionNav {

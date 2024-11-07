@@ -4,7 +4,7 @@
     color: white;
     /* background-color: var(--background); */
     padding: 1.5rem;
-    margin: 1.5rem;
+    margin: 1rem auto 10rem 1rem;
 }
 
 .p {
@@ -27,7 +27,7 @@
 
 .title {
     margin: 1.5rem 0;
-    font-size: clamp(var(--font-36px), var(--font-48px), var(--font-64px));
+    font-size: clamp(var(--font-48px), 5vw, var(--font-64px));
 }
 
 .button {
@@ -35,7 +35,8 @@
     align-items: center;
     border: none;
     background: transparent;
-    color: var(--primary-content);
+    color: white;
+    cursor: pointer;
 }
 
 .buttonIcon {
@@ -49,10 +50,32 @@
 }
 
 .icon {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1.25rem;
+    width: 1.25rem;
+    margin-left: 0.25rem;
 }
 
 .buttonText {
+    font-size: var(--font-20px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
     margin-left: 1rem;
+}
+
+@media (min-width: 1042px) {
+
+    .heroDiv {
+        margin: 1rem auto 10rem 10rem;
+    }
+
+    .buttonIcon {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .icon {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
 }
