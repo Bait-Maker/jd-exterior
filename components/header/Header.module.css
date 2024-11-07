@@ -1,0 +1,37 @@
+.contentWrapper {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.contentWrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("../../assets/house.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+}
+
+.contentDiv {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background: rgb(53, 57, 64);
+    background: linear-gradient(0deg, rgba(53, 57, 64, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+
+
+.div {
+    height: 100vh;
+    background-color: var(--background);
+}

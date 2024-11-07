@@ -1,28 +1,45 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: rgb(1, 116, 228);
+  --primary-content: rgb(229, 242, 255);
+  --primary-dark: rgb(1, 90, 177);
+  --primary-light: rgb(26, 142, 254);
+
+  --secondary: rgb(56, 1, 228);
+  --secondary-content: rgb(235, 229, 255);
+  --secondary-dark: rgb(44, 1, 177);
+  --secondary-light: rgb(81, 26, 254);
+
+  --background: rgb(24, 26, 27);
+  --foreground: rgb(36, 38, 40);
+  --border: rgb(61, 64, 67);
+
+  --copy: rgb(251, 251, 251);
+  --copy-light: rgb(215, 217, 219);
+  --copy-lighter: rgb(161, 166, 170);
+
+  --success: rgb(1, 228, 1);
+  --warning: rgb(228, 228, 1);
+  --error: rgb(228, 1, 1);
+  --success-content: rgb(0, 0, 0);
+  --warning-content: rgb(0, 0, 0);
+  --error-content: rgb(255, 229, 229);
+
+  --font-4px: 0.25rem;
+  --font-8px: 0.5rem;
+  --font-12px: 0.75rem;
+  --font-14px: 0.875rem;
+  --font-16px: 1rem;
+  --font-18px: 1.125rem;
+  --font-20px: 1.25rem;
+  --font-22px: 1.375rem;
+  --font-24px: 1.5rem;
+  --font-32px: 2rem;
+  --font-36px: 2.25rem;
+  --font-48px: 3rem;
+  --font-64px: 4rem;
+  --font-72px: 4.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 * {
   box-sizing: border-box;
@@ -30,13 +47,6 @@ body {
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+body {
+  background-color: var(--background);
 }

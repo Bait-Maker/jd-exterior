@@ -1,0 +1,58 @@
+.heroDiv {
+    position: relative;
+    z-index: 10;
+    color: white;
+    /* background-color: var(--background); */
+    padding: 1.5rem;
+    margin: 1.5rem;
+}
+
+.p {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-20px);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.p::before {
+    content: "";
+    width: 2rem;
+    height: 3px;
+    margin-right: 0.75rem;
+    margin-bottom: 0.15rem;
+    background-color: var(--primary);
+}
+
+.title {
+    margin: 1.5rem 0;
+    font-size: clamp(var(--font-36px), var(--font-48px), var(--font-64px));
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    color: var(--primary-content);
+}
+
+.buttonIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.icon {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.buttonText {
+    margin-left: 1rem;
+}

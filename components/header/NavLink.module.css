@@ -1,0 +1,62 @@
+.wrapper {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    color: var(--primary-content);
+    font-size: var(--font-18px);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-right: 1rem;
+}
+
+.scrolled {
+    color: var(--background);
+}
+
+.link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color: var(--primary);
+    height: 4px;
+    width: 0%;
+    border-radius: 9999px;
+    transition: 0.3s;
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
+.motionDiv {
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    color: var(--primary-content);
+    background-color: black;
+}
+
+.divOne {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: -1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+}
+
+.divTwo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1rem;
+    height: 1rem;
+    background-color: white;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
