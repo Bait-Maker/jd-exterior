@@ -10,6 +10,7 @@
   --secondary-light: rgb(81, 26, 254);
 
   --background: rgb(24, 26, 27);
+  --background-light: rgb(245, 245, 246);
   --foreground: rgb(36, 38, 40);
   --border: rgb(61, 64, 67);
 
@@ -33,8 +34,10 @@
   --font-20px: 1.25rem;
   --font-22px: 1.375rem;
   --font-24px: 1.5rem;
+  --font-28px: 1.75rem;
   --font-32px: 2rem;
   --font-36px: 2.25rem;
+  --font-40px: 2.5rem;
   --font-48px: 3rem;
   --font-64px: 4rem;
   --font-72px: 4.5rem;

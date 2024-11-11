@@ -1,0 +1,7 @@
+.chip {
+    font-size: var(--font-14px);
+    line-height: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    background-color: var(--primary-content);
+}

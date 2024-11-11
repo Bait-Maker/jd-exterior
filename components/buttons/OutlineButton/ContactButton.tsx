@@ -5,6 +5,7 @@ import styles from "./ContactButton.module.css";
 type Props = {
   children: React.ReactNode;
   className?: string;
+
   //? All other props
   [x: string]: any;
 };

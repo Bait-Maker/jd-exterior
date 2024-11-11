@@ -1,0 +1,91 @@
+.section {
+    background-color: var(--background-light);
+    margin: 5rem 0;
+    padding: 1rem 0;
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.container {
+    /* margin: 0 3rem; */
+    max-width: 72rem;
+}
+
+.title {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: var(--background);
+}
+
+.title::before {
+    content: "";
+    width: 2rem;
+    height: 3px;
+    margin-right: 0.75rem;
+    margin-bottom: 0.15rem;
+    background-color: var(--primary);
+}
+
+.motionDiv {
+    display: flex;
+}
+
+.motionButtonLeft {
+    position: absolute;
+    left: 0;
+    top: 60%;
+    z-index: 30;
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    border: none;
+    background-color: var(--background);
+    padding: 0.75rem;
+    padding-left: 0.5rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    color: #ffffff;
+    backdrop-filter: blur(4px);
+    transition-property: padding;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.motionButtonLeft:hover {
+    padding-left: 0.75rem;
+}
+
+.motionButtonRight {
+    position: absolute;
+    right: 0;
+    top: 60%;
+    z-index: 30;
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+    border: none;
+    background-color: var(--background);
+    padding: 0.75rem;
+    padding-right: 0.5rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    color: #ffffff;
+    backdrop-filter: blur(4px);
+    transition-property: padding;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.motionButtonRight:hover {
+    padding-right: 0.75rem;
+}

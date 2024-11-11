@@ -1,0 +1,84 @@
+.container {
+    position: relative;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: var(--font-14px);
+    font-weight: 500;
+    color: var(--background);
+    border: none;
+    background: transparent;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 400ms;
+}
+
+
+.top,
+.right,
+.bottom,
+.left {
+    position: absolute;
+    background-color: var(--background);
+}
+
+.top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    transition-delay: 300ms;
+}
+
+.right {
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    transition-delay: 200ms;
+}
+
+.bottom {
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 100%;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 100ms;
+    transition-delay: 100ms;
+}
+
+.left {
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 100ms;
+
+}
+
+.container:hover {
+    background-color: var(--primary);
+    color: white;
+    transition-delay: 400ms;
+}
+
+.container:hover .top,
+.container:hover .bottom {
+    width: 0;
+}
+
+.container:hover .right,
+.container:hover .left {
+    height: 0;
+}

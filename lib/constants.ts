@@ -55,3 +55,49 @@ export const INDOOR_LINKS = [
     href: "#",
   },
 ];
+
+export const CAROUSEL_ITEMS = [
+  {
+    id: 1,
+    url: "/assets/carousel-temp-img.jpg",
+    category: "Siding",
+    title: "Evenston",
+  },
+  {
+    id: 2,
+    url: "/assets/carousel-temp-img.jpg",
+    category: "Siding",
+    title: "Evenston",
+  },
+  {
+    id: 3,
+    url: "/assets/carousel-temp-img.jpg",
+    category: "Siding",
+    title: "Evenston",
+  },
+  {
+    id: 4,
+    url: "/assets/carousel-temp-img.jpg",
+    category: "Siding",
+    title: "Evenston",
+  },
+  {
+    id: 5,
+    url: "/assets/carousel-temp-img.jpg",
+    category: "Siding",
+    title: "Evenston",
+  },
+  // {
+  //   id: 6,
+  //   url: "/assets/carousel-temp-img.jpg",
+  //   category: "Siding",
+  //   title: "Evenston",
+  // },
+  // {
+  //   id: 7,
+  //   url: "/assets/carousel-temp-img.jpg",
+  //   category: "Siding",
+  //   title: "Evenston",
+  // },
+];
+
