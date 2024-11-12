@@ -1,0 +1,65 @@
+/*! some colors will be provided with inline styles */
+
+.motionDiv {
+    width: 100%;
+    min-height: 100%;
+    padding: 2rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    background-color: var(--foreground);
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.flavorText {
+    margin: 0 auto;
+    font-size: var(--font-24px);
+    line-height: 2rem;
+    color: var(--primary-light);
+}
+
+.description,
+.descriptionTwo {
+    font-size: 1.125rem;
+    font-size: clamp(1.125rem, 1.025rem + 0.5vw, 1.625rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.75rem;
+    margin: 2rem 0;
+}
+
+.descriptionTwo {
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+.name {
+    display: block;
+    font-weight: 600;
+    font-size: var(--font-18px);
+    line-height: 1.75rem;
+}
+
+.location {
+    display: block;
+    font-size: var(--font-14px);
+}
+
+@media (min-width: 1024px) {
+    .motionDiv {
+        width: 80%;
+        padding: 3rem;
+    }
+
+    .description,
+    .descriptionTwo {
+        font-weight: 350;
+        line-height: 2rem;
+    }
+
+    .flavorText {
+        font-size: var(--font-28px);
+    }
+}
