@@ -5,6 +5,8 @@
     font-weight: 500;
     text-decoration: none;
     color: var(--primary-content);
+    border: 0;
+    background: transparent;
     letter-spacing: 1px;
     font-size: 20px;
 }

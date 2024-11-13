@@ -13,7 +13,7 @@ const StackedCardTestimonials = () => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h3 className={styles.h3}>What our customers think</h3>
+        <h3 className={styles.h3}>What Our Customers Think</h3>
         <div className={styles.buttonDiv}>
           <Cards selected={selected} setSelected={setSelected} />
           <SelectButtons

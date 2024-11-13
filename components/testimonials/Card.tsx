@@ -27,7 +27,7 @@ const Card = ({
   const scale = position <= selected ? 1 : 1 + 0.015 * (position - selected);
   const offset = position <= selected ? 0 : 95 + (position - selected) * 3;
   const background =
-    position % 2 ? "var(--background-light)" : "var(--background)";
+    position % 2 ? "var(--background-light)" : "var(--foreground)";
   const color = position % 2 ? "var(--background)" : "white";
 
   const content = descriptionTwo && (

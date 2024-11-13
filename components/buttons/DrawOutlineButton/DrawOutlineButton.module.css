@@ -5,6 +5,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
     font-size: var(--font-14px);
+    letter-spacing: 1px;
     font-weight: 500;
     color: var(--background);
     border: none;
@@ -13,7 +14,6 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 400ms;
 }
-
 
 .top,
 .right,

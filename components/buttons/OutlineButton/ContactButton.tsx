@@ -13,7 +13,7 @@ type Props = {
 const ContactButton = ({ children, className, ...props }: Props) => {
   return (
     <div>
-      <Link href="#" className={`${styles.link} ${className}`} {...props}>
+      <Link href={"#"} className={`${styles.link} ${className}`} {...props}>
         {children}
       </Link>
     </div>

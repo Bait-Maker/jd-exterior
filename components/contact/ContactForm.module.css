@@ -1,0 +1,105 @@
+.section {
+    margin: 5rem auto;
+    padding: 4rem 0;
+}
+
+.sectionTitle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+    font-size: var(--font-28px);
+    color: var(--background-light);
+    font-weight: 600;
+}
+
+.sectionTitle::before {
+    content: "";
+    width: 2rem;
+    height: 3px;
+    margin-right: 0.75rem;
+    margin-bottom: 0.15rem;
+    background-color: var(--primary);
+}
+
+.formContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    padding: 2rem;
+    border-radius: 0.75rem;
+    width: 90%;
+    max-width: 50rem;
+    color: var(--primary-content);
+    background-color: var(--foreground);
+}
+
+.formHeading {
+    font-size: var(--font-18px);
+}
+
+.formHeading p {
+    font-size: var(--font-16px);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.asterisk {
+    color: var(--error);
+}
+
+.form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    font-size: var(--font-14px);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.form input,
+.form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid var(--foreground);
+    color: var(--background-light);
+    background-color: var(--background);
+}
+
+.form input:focus,
+.form textarea:focus {
+    outline-color: var(--background-light);
+    background-color: var(--foreground);
+}
+
+.row {
+    display: flex;
+    gap: 1rem;
+}
+
+.row p {
+    width: 100%;
+}
+
+.actions {
+    text-align: right;
+}
+
+.actions button {
+    color: var(--background-light);
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    font-size: var(--font-20px);
+    letter-spacing: 1px;
+}
+
+.actions span {
+    background-color: var(--background-light);
+}

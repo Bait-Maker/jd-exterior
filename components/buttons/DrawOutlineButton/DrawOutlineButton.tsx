@@ -9,7 +9,7 @@ type Props = {
 const DrawOutlineButton = ({ children, className, ...props }: Props) => {
   return (
     <button className={`${styles.container} ${className}`} {...props}>
-      <span>{children}</span>
+      {children}
 
       {/* TOP */}
       <span className={styles.top} />

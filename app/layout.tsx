@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 
+import HeaderContextProvider from "@/contexts/header-context";
+import Header from "@/components/header/Header";
+
 const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
@@ -19,7 +22,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body className={montserrat.className}>
+        <HeaderContextProvider>
+          <Header />
+        </HeaderContextProvider>
+        {children}
+        <footer></footer>
+      </body>
     </html>
   );
 }
