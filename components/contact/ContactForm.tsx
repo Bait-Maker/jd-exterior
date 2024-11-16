@@ -1,13 +1,53 @@
-import DrawOutlineButton from "../buttons/DrawOutlineButton/DrawOutlineButton";
+"use client";
+
+import { useContext } from "react";
+import { NotificationContext } from "@/contexts/notification-context";
+import { AnimatePresence } from "framer-motion";
+import toast from "react-hot-toast";
+
+import Notification from "../util/notification/Notification";
 import styles from "./ContactForm.module.css";
+import { SendEmail } from "@/lib/actions";
+import FormSubmitButton from "./FormSubmitButton";
+import { EmailSchema } from "@/lib/types";
 
 const ContactForm = () => {
+  const { notification, createNotif, removeNotif } =
+    useContext(NotificationContext);
+
+  let successMessage = "";
+
+  const clientAction = async (formData: FormData) => {
+    // construct new email object
+    const newEmail = Object.fromEntries(formData);
+
+    //client-side validation
+    const result = EmailSchema.safeParse(newEmail);
+    if (!result.success) {
+      let errorMessage = "";
+
+      result.error.issues.forEach((issue) => {
+        errorMessage = `${errorMessage} ${issue.path[0]}: ${issue.message}.`;
+      });
+
+      toast.error(errorMessage);
+      return;
+    }
+
+    const response = await SendEmail(result.data);
+    if (response?.error) {
+      // output error message
+      toast.error(response.error);
+    }
+
+    successMessage = "Email Sent Succesfully!";
+    createNotif(successMessage);
+  };
+
   return (
     <section className={styles.section}>
-      <h2 className={styles.sectionTitle}>Get In Touch</h2>
-
       <div className={styles.formContainer}>
-        <form className={styles.form}>
+        <form className={styles.form} action={clientAction}>
           <div className={styles.formHeading}>
             <h1>Contact Us</h1>
             <p>
@@ -36,6 +76,7 @@ const ContactForm = () => {
                 type="email"
                 id="email"
                 name="email"
+                maxLength={500}
                 placeholder="example@gmail.com"
                 required
               />
@@ -50,17 +91,28 @@ const ContactForm = () => {
               id="phone"
               name="phone"
               placeholder="123-123-1234"
+              required
             />
           </p>
           <p>
-            <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" rows={10} />
+            <label htmlFor="message">
+              Message <span className={styles.asterisk}>*</span>
+            </label>
+            <textarea id="message" name="message" rows={10} required />
           </p>
           <p className={styles.actions}>
-            <DrawOutlineButton type={"submit"}>Send</DrawOutlineButton>
+            <FormSubmitButton type="submit" />
           </p>
         </form>
       </div>
+      <AnimatePresence>
+        {notification.length > 1 && (
+          <Notification
+            removeNotif={removeNotif}
+            text={notification}
+          ></Notification>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

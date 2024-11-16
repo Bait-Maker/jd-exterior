@@ -4,6 +4,7 @@ import "./globals.css";
 
 import HeaderContextProvider from "@/contexts/header-context";
 import Header from "@/components/header/Header";
+import { Toaster } from "react-hot-toast";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -27,6 +28,8 @@ export default function RootLayout({
           <Header />
         </HeaderContextProvider>
         {children}
+
+        <Toaster position="bottom-right" />
         <footer></footer>
       </body>
     </html>
