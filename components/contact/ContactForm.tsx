@@ -10,6 +10,7 @@ import styles from "./ContactForm.module.css";
 import { SendEmail } from "@/lib/actions";
 import FormSubmitButton from "./FormSubmitButton";
 import { EmailSchema } from "@/lib/types";
+import SideContactPanel from "./SideContactPanel";
 
 const ContactForm = () => {
   const { notification, createNotif, removeNotif } =
@@ -49,7 +50,7 @@ const ContactForm = () => {
       <div className={styles.formContainer}>
         <form className={styles.form} action={clientAction}>
           <div className={styles.formHeading}>
-            <h1>Contact Us</h1>
+            <h2>Request a Consultation</h2>
             <p>
               "<span className={styles.asterisk}>*</span>" indicates required
               fields
@@ -77,7 +78,7 @@ const ContactForm = () => {
                 id="email"
                 name="email"
                 maxLength={500}
-                placeholder="example@gmail.com"
+                placeholder="example@example.com"
                 required
               />
             </p>
@@ -104,6 +105,7 @@ const ContactForm = () => {
             <FormSubmitButton type="submit" />
           </p>
         </form>
+        <SideContactPanel />
       </div>
       <AnimatePresence>
         {notification.length > 1 && (

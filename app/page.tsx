@@ -16,8 +16,6 @@ export default function Home() {
       <NotificationContextProvider>
         <ContactForm />
       </NotificationContextProvider>
-
-      <h1 style={{ color: "White" }}>Footer </h1>
     </main>
   );
 }

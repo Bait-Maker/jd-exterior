@@ -1,0 +1,39 @@
+.container {
+    background-color: var(--background-light) !important;
+    padding: 3rem;
+    border-radius: 0.75rem;
+    width: 90%;
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+
+.firstHeading {
+    font-size: var(--font-18px);
+}
+
+.firstHeading p {
+    font-size: var(--font-16px);
+    margin-top: 0.5rem;
+}
+
+.heading {
+    margin-top: 4rem;
+    font-size: var(--font-18px);
+}
+
+.heading p {
+    font-size: var(--font-16px);
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 30rem;
+        height: 662px;
+        margin: 0;
+    }
+}

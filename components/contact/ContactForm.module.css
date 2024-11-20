@@ -23,12 +23,6 @@
     background-color: var(--primary);
 }
 
-.formContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .form {
     padding: 3rem;
     border-radius: 0.75rem;
@@ -36,6 +30,7 @@
     max-width: 50rem;
     color: var(--primary-content);
     background-color: var(--foreground);
+    margin: 0 auto;
 }
 
 .formHeading {
@@ -102,4 +97,18 @@
 
 .actions span {
     background-color: var(--background-light);
+}
+
+@media (min-width: 1024px) {
+
+    .formContainer {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+
+    .form {
+        margin: 0;
+    }
 }
