@@ -59,7 +59,7 @@ const Footer = () => {
               <li>
                 Design & Build by{" "}
                 <Link href="https://jakubdejworek.vercel.app/" target="blank">
-                  Jakub Dejworek
+                  Agata Orkisz & Jakub Dejworek
                 </Link>
               </li>
             </ul>

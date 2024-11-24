@@ -1,3 +1,9 @@
+import PropectProjectThumbnail from "@/assets/garage-main.jpg";
+import EvenstonThumbnail from "@/assets/gazebo-main.jpg";
+import ProsectDeckThumbnail from "@/assets/Prospect-deck-main.jpg";
+import GlenviewThumbnail from "@/assets/redDoor-main.jpg";
+import StCharlesThumbnail from "@/assets/stCharles-main.jpg";
+
 export const OUTDOOR_LINKS = [
   {
     text: "Doors",
@@ -59,46 +65,34 @@ export const INDOOR_LINKS = [
 export const CAROUSEL_ITEMS = [
   {
     id: 1,
-    url: "/assets/carousel-temp-img.jpg",
-    category: "Siding",
+    url: EvenstonThumbnail.src,
+    category: ["Gazebo", "Roofing"],
     title: "Evenston",
   },
   {
     id: 2,
-    url: "/assets/carousel-temp-img.jpg",
-    category: "Siding",
-    title: "Evenston",
+    url: PropectProjectThumbnail.src,
+    category: ["Garage", "Windows", "Doors"],
+    title: "Prospect Heights",
   },
   {
     id: 3,
-    url: "/assets/carousel-temp-img.jpg",
-    category: "Siding",
-    title: "Evenston",
+    url: ProsectDeckThumbnail.src,
+    category: ["Deck", "Lighting"],
+    title: "Prosepct Heights",
   },
   {
     id: 4,
-    url: "/assets/carousel-temp-img.jpg",
-    category: "Siding",
-    title: "Evenston",
+    url: GlenviewThumbnail.src,
+    category: ["Doors"],
+    title: "Glenview",
   },
   {
     id: 5,
-    url: "/assets/carousel-temp-img.jpg",
-    category: "Siding",
-    title: "Evenston",
+    url: StCharlesThumbnail.src,
+    category: ["Portico", "Copper Elements"],
+    title: "St. Charles",
   },
-  // {
-  //   id: 6,
-  //   url: "/assets/carousel-temp-img.jpg",
-  //   category: "Siding",
-  //   title: "Evenston",
-  // },
-  // {
-  //   id: 7,
-  //   url: "/assets/carousel-temp-img.jpg",
-  //   category: "Siding",
-  //   title: "Evenston",
-  // },
 ];
 
 export const TESTIMONIALS = [

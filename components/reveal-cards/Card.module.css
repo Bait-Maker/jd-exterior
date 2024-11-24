@@ -40,9 +40,13 @@
     transition-behavior: normal;
 }
 
+.categorySeperator {
+    margin-left: 0.5rem;
+}
+
 
 .location {
-    font-size: var(--font-28px);
+    font-size: var(--font-24px);
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -75,5 +79,9 @@
 
     .card:hover .title {
         transform: translateY(-6rem);
+    }
+
+    .location {
+        font-size: var(--font-28px);
     }
 }

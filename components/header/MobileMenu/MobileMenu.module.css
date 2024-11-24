@@ -8,8 +8,9 @@
     line-height: 2.25rem;
     border: none;
     background-color: transparent;
-    color: var(--primary-content);
+    color: var(--background);
     margin-right: 2rem;
+    cursor: pointer;
 }
 
 .motionNav {

@@ -52,14 +52,18 @@ const CardCarousel = () => {
       <div className={styles.wrapper} ref={ref}>
         {/* CARDS */}
         <div className={styles.container}>
-          <p className={styles.title}>Selected Projects</p>
-          <motion.div animate={{ x: offset }} className={styles.motionDiv}>
+          <p className={styles.title}>Featured Projects</p>
+          <motion.div
+            animate={{ x: offset }}
+            transition={{ ease: "easeOut" }}
+            className={styles.motionDiv}
+          >
             {CAROUSEL_ITEMS.map((item) => {
               return (
                 <Card
                   key={item.id}
-                  imgSrc={item.url}
-                  category={item.category}
+                  url={item.url}
+                  categorys={item.category}
                   title={item.title}
                 />
               );

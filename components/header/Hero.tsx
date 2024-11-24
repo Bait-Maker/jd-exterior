@@ -14,7 +14,7 @@ const Hero = () => {
         <div className={styles.buttonIcon}>
           <IoMdPlay className={styles.icon} />
         </div>
-        <div className={styles.buttonText}>Who we are</div>
+        <div className={styles.buttonText}>Play me!</div>
       </button>
     </div>
   );

@@ -1,10 +1,12 @@
 .section {
     position: relative;
-    margin: 5rem 0;
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
     color: white;
     overflow: hidden;
+    background: rgb(24, 26, 27);
+    background: linear-gradient(0deg, rgba(24, 26, 27, 1) 0%, rgba(36, 38, 40, 0.7077031496192228) 100%);
 }
 
 .container {

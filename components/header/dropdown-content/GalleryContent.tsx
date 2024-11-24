@@ -9,7 +9,11 @@ const GalleryContent = () => {
         <div key={element.text} className={styles.container}>
           <li className={styles.listItem}>
             <Link href={"#"} className={styles.link}>
-              <img src={element.source} className={styles.image} />
+              <img
+                src={element.source}
+                className={styles.image}
+                alt="Project Image"
+              />
             </Link>
             <Link href={"#"} className={styles.link}>
               {element.text}

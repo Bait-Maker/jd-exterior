@@ -1,15 +1,17 @@
 :root {
   --primary: rgb(1, 116, 228);
   --primary-content: rgb(245, 245, 246);
+  --primary-content-dark: rgb(24, 26, 27);
   --primary-dark: rgb(1, 90, 177);
   --primary-light: rgb(26, 142, 254);
 
-  --secondary: rgb(56, 1, 228);
+  --secondary: rgb(136, 200, 232);
   --secondary-content: rgb(235, 229, 255);
   --secondary-dark: rgb(44, 1, 177);
   --secondary-light: rgb(81, 26, 254);
 
   --background: rgb(24, 26, 27);
+  --hsl-background: hsl(200, 6%, 10%);
   --background-light: rgb(245, 245, 246);
   --foreground: rgb(36, 38, 40);
   --border: rgb(61, 64, 67);
@@ -52,6 +54,6 @@
 }
 
 body {
-  background-color: var(--background);
+  background-color: var(--hsl-background);
   min-height: 100vh;
 }

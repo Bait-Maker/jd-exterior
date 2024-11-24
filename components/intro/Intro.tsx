@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ContactButton from "../buttons/OutlineButton/ContactButton";
 import styles from "./Intro.module.css";
 
@@ -5,7 +6,8 @@ import styles from "./Intro.module.css";
 
 const Intro = () => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
+      <div className={styles.imageDiv} />
       <div className={styles.textContainer}>
         <div className={styles.content}>
           <p className={styles.estTag}>EST. 2000</p>
@@ -21,8 +23,7 @@ const Intro = () => {
           <ContactButton className={styles.button}>About Us</ContactButton>
         </div>
       </div>
-      <div className={styles.imageDiv} />
-    </div>
+    </section>
   );
 };
 
