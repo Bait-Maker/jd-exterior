@@ -25,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={montserrat.className}>
+        <div id="modal-root" />
         <HeaderContextProvider>
           <Header />
         </HeaderContextProvider>

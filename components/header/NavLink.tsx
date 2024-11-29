@@ -3,6 +3,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useContext, useState } from "react";
+import { usePathname } from "next/navigation";
+
 import styles from "./NavLink.module.css";
 import { HeaderContext } from "@/contexts/header-context";
 
@@ -15,8 +17,13 @@ type props = {
 const NavLink = ({ children, href, FlyoutContent }: props) => {
   const [open, setOpen] = useState(false);
   const { scrolled } = useContext(HeaderContext);
+  const pathname = usePathname();
 
   const showFlyout = FlyoutContent && open;
+
+  const linkStyles = `${styles.link} ${
+    pathname === href ? `${styles.isActive}` : undefined
+  } ${scrolled ? `${styles.scrolled}` : undefined}`;
 
   return (
     <div
@@ -24,12 +31,7 @@ const NavLink = ({ children, href, FlyoutContent }: props) => {
       onMouseLeave={() => setOpen(false)}
       className={styles.wrapper}
     >
-      <Link
-        href={href}
-        className={`${styles.link} ${
-          scrolled ? `${styles.scrolled}` : undefined
-        }`}
-      >
+      <Link href={href} className={linkStyles}>
         {children}
       </Link>
       <AnimatePresence>

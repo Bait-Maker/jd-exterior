@@ -30,6 +30,18 @@
     transition: 0.3s;
 }
 
+.isActive::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color: var(--primary);
+    height: 4px;
+    width: 100%;
+    border-radius: 9999px;
+    transition: 0.3s;
+}
+
 .link:hover::after {
     width: 100%;
 }

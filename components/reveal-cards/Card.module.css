@@ -13,7 +13,7 @@
 }
 
 .card:hover .title {
-    transform: translateY(-8rem);
+    transform: translateY(-6rem);
 }
 
 .imgDiv {

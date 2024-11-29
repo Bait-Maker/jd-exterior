@@ -38,7 +38,7 @@ export const LINKS = [
   },
   {
     text: "Gallery",
-    href: "#",
+    href: "/gallery",
     component: GalleryContent,
   },
   {
