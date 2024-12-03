@@ -56,6 +56,10 @@
     font-weight: 500;
 }
 
+.form textarea {
+    resize: none;
+}
+
 .form input,
 .form textarea {
     display: block;
@@ -75,7 +79,6 @@
 }
 
 .row {
-    display: flex;
     gap: 1rem;
 }
 
@@ -110,5 +113,9 @@
 
     .form {
         margin: 0;
+    }
+
+    .row {
+        display: flex;
     }
 }

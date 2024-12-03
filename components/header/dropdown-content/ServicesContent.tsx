@@ -8,9 +8,9 @@ const ServicesContent = () => {
     <div className={styles.wrapper}>
       <div className={styles.sideContianer}>
         <div className={styles.contentDiv}>
-          <h2 className={styles.h2}>Services</h2>
+          <h2 className={styles.h2}>Gallery</h2>
           <p className={styles.description}>
-            Read all about the services we offer.
+            View some of the amazing projects we've built.
           </p>
         </div>
         <Link href={"#"} className={styles.seeMoreLink}>

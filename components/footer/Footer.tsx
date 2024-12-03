@@ -25,7 +25,9 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.contentDiv}>
           <div className={`${styles.logoDiv} ${styles.cell}`}>
-            <LogoSvg />
+            <Link href={"/"}>
+              <LogoSvg />
+            </Link>
           </div>
 
           <div className={`${styles.navDiv} ${styles.cell}`}>

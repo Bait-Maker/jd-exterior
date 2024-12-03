@@ -9,6 +9,7 @@ import Links from "./Links";
 import { HeaderContext } from "@/contexts/header-context";
 import ContactButton from "../buttons/OutlineButton/ContactButton";
 import MobileMenu from "./MobileMenu/MobileMenu";
+import Link from "next/link";
 
 const FlyoutNav = () => {
   const { updateScroll } = useContext(HeaderContext);
@@ -26,7 +27,9 @@ const FlyoutNav = () => {
       }`}
     >
       <div className={styles.wrapper}>
-        <LogoSvg isScrolled={scrolled} />
+        <Link href={"/"}>
+          <LogoSvg isScrolled={scrolled} />
+        </Link>
         <div className={styles.linkContainer}>
           <Links />
 

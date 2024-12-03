@@ -1,7 +1,6 @@
 import NavLink from "./NavLink";
 
 import ServicesContent from "./dropdown-content/ServicesContent";
-import GalleryContent from "./dropdown-content/GalleryContent";
 import styles from "./Links.module.css";
 
 const Links = () => {
@@ -28,18 +27,13 @@ export const LINKS = [
     href: "/",
   },
   {
-    text: "Services",
-    href: "#",
-    component: ServicesContent,
-  },
-  {
     text: "Projects",
     href: "#",
   },
   {
     text: "Gallery",
     href: "/gallery",
-    component: GalleryContent,
+    component: ServicesContent,
   },
   {
     text: "About",
