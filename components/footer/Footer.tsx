@@ -3,7 +3,7 @@
 import { LINKS } from "@/components/header/Links";
 import styles from "./Footer.module.css";
 import { LogoSvg } from "../header/logoSvg";
-import DrawOutlineButton from "../buttons/DrawOutlineButton/DrawOutlineButton";
+import DrawOutlineButton from "../buttons/draw-outline-button/DrawOutlineButton";
 import Link from "next/link";
 
 const Footer = () => {

@@ -1,0 +1,104 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    background-color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: "montserrat", latin;
+}
+
+.image {
+    position: relative;
+    z-index: 1;
+    padding-top: 80%;
+    background: var(--background);
+}
+
+.imageInner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity 0.3s ease;
+}
+
+.text {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+    background-color: white;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.top h2 {
+    text-transform: uppercase;
+    color: var(--background);
+    font-weight: 500;
+    font-size: var(--font-20px);
+}
+
+.categoryList {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+
+.categorySeperator {
+    margin-left: 0.5rem;
+}
+
+.bottom {
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+.button {
+    width: 100%;
+    height: 3.5rem;
+    font-size: var(--font-20px) !important;
+}
+
+@media (min-width: 640px) {
+
+    .cardContainer:hover .text {
+        transform: translateY(-6rem);
+    }
+
+    .text {
+        padding: 2rem;
+    }
+
+    .bottom {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        padding: 0 1rem 1rem 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .text {
+        padding: 2rem;
+    }
+
+    .bottom {
+        padding: 0 2rem 2rem 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bottom {
+        padding: 0 2.5rem 2.5rem 2.5rem;
+    }
+}

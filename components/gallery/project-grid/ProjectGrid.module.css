@@ -1,0 +1,80 @@
+.wrapper {
+    padding: 2.5rem 5vw;
+    background-color: var(--background-light);
+}
+
+.gridContainer {
+    padding-right: 0;
+    padding-left: 0;
+    max-width: 87.5rem;
+    margin: 0 auto;
+}
+
+.gridFlex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.cell {
+    flex: 0 0 auto;
+    min-height: 0px;
+    min-width: 0px;
+    width: 100%;
+}
+
+.cardList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 .75rem;
+    list-style: none;
+}
+
+.card {
+    width: 100%;
+    padding: .75rem;
+}
+
+
+
+
+@media screen and (max-width: 39.9988rem) {
+    .wrapper {
+        padding-top: 5vw;
+    }
+}
+
+@media (min-width: 640px) {
+    .wrapper {
+        padding: 5rem 5vw;
+    }
+
+    .gridContainer {
+        padding-right: .75rem;
+        padding-left: .75rem;
+    }
+
+    .card {
+        width: 50%;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .wrapper {
+        padding: 7.5rem 5vw;
+    }
+
+    .gridContainer {
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+
+    .cardList {
+        margin: 0 -1.25rem;
+    }
+
+    .card {
+        width: 33.3%;
+        padding: 1.25rem;
+    }
+}

@@ -5,5 +5,5 @@ type Props = {
 };
 
 export const Chip = ({ children }: Props) => {
-  return <span className={styles.chip}>{children}</span>;
+  return <button className={styles.chip}>{children}</button>;
 };

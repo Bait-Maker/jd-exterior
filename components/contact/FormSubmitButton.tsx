@@ -1,7 +1,7 @@
 "use client";
 
 import { useFormStatus } from "react-dom";
-import DrawOutlineButton from "../buttons/DrawOutlineButton/DrawOutlineButton";
+import DrawOutlineButton from "../buttons/draw-outline-button/DrawOutlineButton";
 
 type Props = {
   [x: string]: any;

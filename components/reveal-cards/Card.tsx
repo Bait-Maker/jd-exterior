@@ -1,6 +1,6 @@
 import { Chip } from "../util/Chip";
 import styles from "./Card.module.css";
-import DrawOutlineButton from "../buttons/DrawOutlineButton/DrawOutlineButton";
+import DrawOutlineButton from "../buttons/draw-outline-button/DrawOutlineButton";
 import React from "react";
 
 type Props = {

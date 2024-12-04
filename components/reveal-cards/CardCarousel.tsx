@@ -8,6 +8,7 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import styles from "./CardCarousel.module.css";
 import { CAROUSEL_ITEMS } from "@/lib/constants";
 import Card from "./Card";
+import ProjectCard from "../gallery/project-card/ProjectCard";
 
 const CARD_WIDTH = 382; // px
 const CARD_HEIGHT = 400; // will need to change
