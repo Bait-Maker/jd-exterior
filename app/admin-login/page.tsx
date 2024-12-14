@@ -1,17 +1,17 @@
-import ImageGrid from "@/components/gallery/ImageGrid";
+import LoginForm from "@/components/login/Form";
 import NavbarImage from "@/components/util/navbar-image/NavbarImage";
 
-const Gallery = () => {
+const AdminLogin = () => {
   return (
     <main>
       <NavbarImage wrapperClassName="header-wrapper">
         <div className="header-hero">
-          <h1>Gallery</h1>
+          <h1>Login</h1>
         </div>
       </NavbarImage>
-      <ImageGrid />
+      <LoginForm />;
     </main>
   );
 };
 
-export default Gallery;
+export default AdminLogin;

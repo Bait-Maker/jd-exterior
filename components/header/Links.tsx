@@ -37,6 +37,6 @@ export const LINKS = [
   },
   {
     text: "About",
-    href: "#",
+    href: "/about",
   },
 ];

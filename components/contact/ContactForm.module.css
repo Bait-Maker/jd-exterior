@@ -70,11 +70,12 @@
     border: 1px solid var(--foreground);
     color: var(--background-light);
     background-color: var(--background);
+    outline: transparent;
 }
 
 .form input:focus,
 .form textarea:focus {
-    outline-color: var(--background-light);
+    border: 1px solid var(--primary);
     background-color: var(--foreground);
 }
 

@@ -1,0 +1,26 @@
+.wrapper {
+    padding: 2.5rem 5vw;
+    background-color: var(--background-light);
+    display: flex;
+    justify-content: center;
+}
+
+.cardList {
+    display: grid;
+    gap: 2px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+    margin: 0 .75rem;
+    list-style: none;
+}
+
+.card {
+    width: auto;
+    padding: .25rem;
+}
+
+
+@media (min-width: 640px) {
+    .wrapper {
+        display: block;
+    }
+}

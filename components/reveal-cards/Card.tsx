@@ -9,8 +9,6 @@ type Props = {
   title: string;
 };
 
-// TODO: adjust title font-size for smaller screens
-
 const Card = ({ url, categorys, title }: Props) => {
   return (
     <div className={styles.card}>

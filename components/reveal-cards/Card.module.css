@@ -46,9 +46,8 @@
 
 
 .location {
-    font-size: var(--font-24px);
+    font-size: var(--font-20px);
     font-weight: 500;
-    letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 1rem;
 }
@@ -82,6 +81,6 @@
     }
 
     .location {
-        font-size: var(--font-28px);
+        font-size: var(--font-24px);
     }
 }

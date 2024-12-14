@@ -40,6 +40,19 @@
     display: flex;
 }
 
+.cardList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 .75rem;
+    list-style: none;
+}
+
+
+.card {
+    width: 100%;
+    padding: .75rem;
+}
+
 .motionButtonLeft {
     position: absolute;
     left: 0;
@@ -86,4 +99,21 @@
 
 .motionButtonRight:hover {
     padding-right: 0.75rem;
+}
+
+@media (min-width: 640px) {
+    .card {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cardList {
+        margin: 0 -1.25rem;
+    }
+
+    .card {
+        width: 33.3%;
+        padding: 1.25rem;
+    }
 }

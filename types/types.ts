@@ -13,3 +13,14 @@ export const EmailSchema = z.object({
 });
 
 export type Email = z.infer<typeof EmailSchema>;
+
+export const LoginSchema = z.object({
+  email: z.string().trim().email({
+    message: "Please enter a valid email.",
+  }),
+  password: z.string().min(1, {
+    message: "Password field can not be empty.",
+  }),
+});
+
+export type Login = z.infer<typeof LoginSchema>;

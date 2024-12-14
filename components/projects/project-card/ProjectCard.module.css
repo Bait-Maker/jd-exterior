@@ -74,6 +74,10 @@
         transform: translateY(-6rem);
     }
 
+    .cardContainer:hover .imageInner {
+        opacity: 0.6;
+    }
+
     .text {
         padding: 2rem;
     }

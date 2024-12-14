@@ -5,7 +5,7 @@ import { z } from "zod"; // helps with type validation for formData
 
 import ContactFormEmail from "@/email/ContactFormEmail";
 import React from "react";
-import { EmailSchema } from "./types";
+import { EmailSchema } from "../types/types";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

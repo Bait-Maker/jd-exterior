@@ -9,7 +9,7 @@ import Notification from "../util/notification/Notification";
 import styles from "./ContactForm.module.css";
 import { SendEmail } from "@/lib/actions";
 import FormSubmitButton from "./FormSubmitButton";
-import { EmailSchema } from "@/lib/types";
+import { EmailSchema } from "@/types/types";
 import SideContactPanel from "./SideContactPanel";
 
 const ContactForm = () => {
@@ -102,7 +102,11 @@ const ContactForm = () => {
             <textarea id="message" name="message" rows={10} required />
           </p>
           <p className={styles.actions}>
-            <FormSubmitButton type="submit" />
+            <FormSubmitButton
+              type="submit"
+              defaultText="Send"
+              pendingText="Sending Email..."
+            />
           </p>
         </form>
         <SideContactPanel />

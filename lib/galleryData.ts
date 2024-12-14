@@ -6,38 +6,39 @@ import patioDoor from "@/assets/patiodoor-gallery.png";
 import portico from "@/assets/portico-gallery.png";
 import siding from "@/assets/siding-gallery.png";
 import skylight from "@/assets/skylight-gallery.png";
+import tempImg from "@/assets/gazebo-build2.jpg";
 
 export const GALLERY_DATA = [
   {
     text: "Copper Elements",
-    source: copper.src,
+    source: tempImg,
   },
   {
     text: "Decks",
-    source: deck.src,
+    source: tempImg,
   },
   {
     text: "Doors",
-    source: door.src,
+    source: tempImg,
   },
   {
     text: "Gazebos",
-    source: gazebo.src,
+    source: tempImg,
   },
   {
     text: "Patio Doors",
-    source: patioDoor.src,
+    source: tempImg,
   },
   {
     text: "Portico",
-    source: portico.src,
+    source: tempImg,
   },
   {
     text: "Siding",
-    source: siding.src,
+    source: tempImg,
   },
   {
     text: "Skylights",
-    source: skylight.src,
+    source: tempImg,
   },
 ];
