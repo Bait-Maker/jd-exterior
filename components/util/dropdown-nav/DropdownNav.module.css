@@ -1,0 +1,91 @@
+.container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-height: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    padding: .5em;
+    border: .05em solid var(--border);
+    border-radius: .25em;
+    outline: none;
+}
+
+.container:focus {
+    border-color: var(--primary);
+}
+
+.value {
+    flex-grow: 1;
+}
+
+.clearBtn {
+    display: flex;
+    align-items: center;
+    background: none;
+    color: var(--border);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: var(--font-20px);
+}
+
+.clearBtn:focus,
+.clearBtn:hover {
+    color: var(--background);
+}
+
+.divider {
+    background-color: var(--border);
+    align-self: stretch;
+    width: 1px;
+}
+
+.caret {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-22px);
+    color: var(--border);
+    cursor: pointer;
+    transition: transform 200ms ease;
+}
+
+.caret:hover {
+    color: var(--background);
+}
+
+.openCaret {
+    transform: rotate(180deg);
+}
+
+.options {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: calc(100% + .25em);
+    display: none;
+    max-height: 15em;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    background-color: var(--background-light);
+}
+
+.options.show {
+    display: block;
+}
+
+.option {
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.option.selected {
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+.option.highlighted {
+    background-color: var(--primary-light);
+    color: white;
+}

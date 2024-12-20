@@ -20,6 +20,8 @@
   --copy-light: rgb(215, 217, 219);
   --copy-lighter: rgb(161, 166, 170);
 
+  --link-not-active: rgba(158, 159, 162, 1);
+
   --success: rgb(1, 228, 1);
   --warning: rgb(228, 228, 1);
   --error: rgb(228, 1, 1);
@@ -44,6 +46,11 @@
   --font-48px: 3rem;
   --font-64px: 4rem;
   --font-72px: 4.5rem;
+
+  /* dropdown nav */
+  --nav-size: 60px;
+  --border-radius: 8px;
+  --speed: 500ms;
 }
 
 
@@ -56,6 +63,14 @@
 body {
   background-color: var(--hsl-background);
   min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 
@@ -93,6 +108,14 @@ body {
   font-weight: 600;
 }
 
+
+.link {
+  color: var(--link-not-active);
+}
+
+.isActive {
+  color: var(--background);
+}
 
 /* link underline on hover & active */
 .link::after {

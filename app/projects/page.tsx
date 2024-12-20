@@ -11,7 +11,7 @@ const Projects = () => {
         </div>
       </NavbarImage>
       <FilterBar />
-      <ProjectGrid />
+      {/* <ProjectGrid /> */}
     </main>
   );
 };

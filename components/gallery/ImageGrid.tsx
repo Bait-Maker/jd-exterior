@@ -19,7 +19,7 @@ const ImageGrid = () => {
             </li>
           );
         })}
-        <button>{user?.email}</button>
+        <button className={styles.addPicture}>Add Picture</button>
       </ul>
     </section>
   );

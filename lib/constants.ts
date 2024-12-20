@@ -67,18 +67,18 @@ export const CAROUSEL_ITEMS = [
     id: 1,
     url: EvenstonThumbnail.src,
     category: ["Gazebo", "Roofing"],
-    title: "Evenston",
+    title: "St. Charles",
   },
   {
     id: 2,
     url: PropectProjectThumbnail.src,
-    category: ["Garage", "Windows", "Doors"],
+    category: ["Garage", "Doors", "Windows"],
     title: "Prospect Heights",
   },
   {
     id: 3,
     url: ProsectDeckThumbnail.src,
-    category: ["Deck", "Lighting"],
+    category: ["Deck", "Lighting", "Windows"],
     title: "Prosepct Heights",
   },
   {
@@ -90,8 +90,8 @@ export const CAROUSEL_ITEMS = [
   {
     id: 5,
     url: StCharlesThumbnail.src,
-    category: ["Portico", "Copper Elements"],
-    title: "St. Charles",
+    category: ["Copper Elements", "Portico", "Windows"],
+    title: "Evenston",
   },
 ];
 

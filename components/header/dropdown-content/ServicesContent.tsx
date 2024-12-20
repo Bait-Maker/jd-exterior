@@ -13,7 +13,7 @@ const ServicesContent = () => {
             View some of the amazing projects we've built.
           </p>
         </div>
-        <Link href={"#"} className={styles.seeMoreLink}>
+        <Link href={"/gallery"} className={styles.seeMoreLink}>
           See more <FiArrowRight />
         </Link>
       </div>
