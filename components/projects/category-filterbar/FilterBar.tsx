@@ -6,8 +6,6 @@ import styles from "./FilterBar.module.css";
 import DropdownNav from "@/components/util/dropdown-nav/DropdownNav";
 import ProjectGrid from "../project-grid/ProjectGrid";
 
-// TODO: add conditional navbar for smaller screens
-
 const options = [
   { value: "all", label: "All" },
   { value: "deck", label: "Deck" },

@@ -35,6 +35,25 @@ export const OUTDOOR_LINKS = [
   },
 ];
 
+export const OUTDOOR_OPTIONS = [
+  { value: "copper", label: "Copper" },
+  { value: "deck", label: "Deck" },
+  { value: "door", label: "Door" },
+  { value: "dormer", label: "Dormer" },
+  { value: "fascia", label: "Fascia" },
+  { value: "fence", label: "Fence" },
+  { value: "flooring", label: "Flooring" },
+  { value: "gazebo", label: "Gazebo" },
+  { value: "garage", label: "Garage" },
+  { value: "gutter", label: "Gutters" },
+  { value: "siding", label: "Siding" },
+  { value: "soffit", label: "Soffit" },
+  { value: "skylight", label: "Skylights" },
+  { value: "painting", label: "Painting" },
+  { value: "roofing", label: "Roofing" },
+  { value: "window", label: "Windows" },
+];
+
 export const INDOOR_LINKS = [
   {
     text: "Attic",

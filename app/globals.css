@@ -73,6 +73,11 @@ a {
   text-decoration: none;
 }
 
+select,
+option {
+  font-family: "Montserrat";
+}
+
 
 /* Global header styles */
 .header-wrapper {

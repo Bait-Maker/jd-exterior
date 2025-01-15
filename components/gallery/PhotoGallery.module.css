@@ -1,0 +1,46 @@
+.navContainer {
+    position: sticky;
+    padding: 5vw 5vw 0 5vw;
+    background-color: var(--background-light);
+}
+
+.flexContainer {
+    padding-right: 0;
+    padding-left: 0;
+    /* max-width: 87.5rem; */
+    margin: 0 auto;
+}
+
+.gridX {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border-bottom: 1px solid rgba(158, 159, 162, 0.2);
+}
+
+.cell {
+    flex: 0 0 auto;
+    min-height: 0px;
+    min-width: 0px;
+    width: 100%;
+}
+
+@media(min-width: 640px) {
+    .navContainer {
+        z-index: 20;
+        padding: 2vw 5vw 0 5vw;
+    }
+
+    .flexContainer {
+        padding-right: .75rem;
+        padding-left: .75rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .flexContainer {
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+}

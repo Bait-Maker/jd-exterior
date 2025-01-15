@@ -14,8 +14,9 @@ const ImageCard = ({ src }: Props) => {
         <Image
           alt=""
           src={src}
-          sizes="50vw"
-          style={{ width: "100%", height: "100%" }}
+          width={2000}
+          height={1300}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       </div>
     </Link>
