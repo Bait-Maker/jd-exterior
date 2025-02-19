@@ -84,18 +84,42 @@
     font-size: var(--font-14px);
     font-family: "Montserrat";
     font-weight: 500;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
 }
 
 .clearBtn {
     background-color: rgba(161, 166, 170, 0.5);
-
+    color: var(--primary-content-dark);
 }
 
 .applyBtn {
     background-color: var(--primary);
     color: var(--primary-content);
+}
+
+.optionBtn {
+    font-family: "Montserrat";
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: rgba(158, 159, 162, .1);
+    border: 1px solid rgba(158, 159, 162, .3);
+}
+
+.optionBtn:hover {
+    background-color: rgba(158, 159, 162, .3);
+}
+
+.selected {
+    background-color: var(--primary);
+    color: var(--primary-content);
+    border: none;
+}
+
+.selected:disabled:hover {
+    cursor: not-allowed;
+    background-color: var(--error);
 }
 
 /* From Uiverse.io by SelfMadeSystem */

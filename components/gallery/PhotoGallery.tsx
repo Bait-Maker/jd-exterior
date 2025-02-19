@@ -11,7 +11,7 @@ const PhotoGallery = () => {
         <div className={styles.flexContainer}>
           <div className={styles.gridX}>
             <div className={styles.cell}>
-              <FilterBar options={OUTDOOR_OPTIONS} />
+              <FilterBar />
             </div>
           </div>
         </div>

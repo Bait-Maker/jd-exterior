@@ -6,31 +6,52 @@ import { useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { OUTDOOR_OPTIONS, INDOOR_LINKS } from "@/lib/constants";
 
-type FilterOptions = {
-  label: string;
-  value: string;
-};
+const FilterBar = () => {
+  // TODO: change input checkboxes to buttons
 
-type FilterProps = {
-  options: FilterOptions[];
-};
-
-const FilterBar = ({ options }: FilterProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedValues, setSelectedValues] = useState<string[]>([]);
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
 
-  const value = searchParams.get("value");
+  const selectedURLValues = searchParams.getAll("value");
 
   function handleOpen() {
     setIsOpen((prevState) => !prevState);
   }
 
+  function handleSelect(value: string) {
+    if (!selectedValues.includes(value)) {
+      setSelectedValues([...selectedValues, value]);
+    } else {
+      setSelectedValues(selectedValues.filter((curr) => curr !== value));
+    }
+  }
+
+  function handleFilter(values: string[]) {
+    const firstvalue = "value=";
+
+    let stringURL = values.join("&value=");
+
+    stringURL = firstvalue + stringURL;
+
+    replace(`${pathname}?${stringURL}`);
+  }
+
+  function handleClear() {
+    replace("/gallery");
+    setSelectedValues([]);
+  }
+
+  console.log(selectedURLValues);
+  console.log(selectedValues);
+  console.log(pathname);
+
   return (
     <div tabIndex={0} className={styles.container}>
       <button onClick={handleOpen} className={styles.filterBtn}>
-        Show Filters <FaFilter />
+        Filters <FaFilter />
       </button>
 
       <span className={styles.divider} />
@@ -45,11 +66,34 @@ const FilterBar = ({ options }: FilterProps) => {
             {OUTDOOR_OPTIONS.map((option, index) => {
               return (
                 <li key={index} className={styles.option}>
-                  <label className={styles.checkContainer}>
-                    <input type="checkbox" />
+                  <button
+                    onClick={() => handleSelect(option.value)}
+                    className={`${styles.optionBtn} ${
+                      selectedURLValues.includes(option.value)
+                        ? `${styles.selected}`
+                        : ""
+                    }`}
+                    disabled={selectedURLValues.includes(option.value)}
+                  >
+                    {option.label}
+                  </button>
+                  {/* <label className={styles.checkContainer}>
+                    {selectedURLValues.includes(option.value) ? (
+                      <input
+                        type="checkbox"
+                        onChange={() => handleSelect(option.value)}
+                        checked
+                      />
+                    ) : (
+                      <input
+                        type="checkbox"
+                        onChange={() => handleSelect(option.value)}
+                      />
+                    )}
+
                     <div className={styles.checkmark}></div>
                   </label>
-                  <label>{option.label}</label>
+                  <label>{option.label}</label> */}
                 </li>
               );
             })}
@@ -74,8 +118,21 @@ const FilterBar = ({ options }: FilterProps) => {
         </div>
 
         <div className={styles.actionBtns}>
-          <button className={styles.clearBtn}>Clear Filters</button>
-          <button className={styles.applyBtn}>Apply Filter</button>
+          <button
+            className={styles.clearBtn}
+            onClick={() => {
+              handleClear();
+              handleOpen();
+            }}
+          >
+            Clear
+          </button>
+          <button
+            onClick={() => handleFilter(selectedValues)}
+            className={styles.applyBtn}
+          >
+            Filter
+          </button>
         </div>
       </div>
     </div>
