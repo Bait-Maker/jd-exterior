@@ -61,9 +61,9 @@ const FilterBar = () => {
     handleSelect(value);
   }
 
-  console.log(selectedURLValues);
+  // console.log(selectedURLValues);
   // console.log(selectedValues);
-  console.log(pathname);
+  // console.log(pathname);
 
   return (
     <div tabIndex={0} className={styles.container}>
@@ -122,11 +122,16 @@ const FilterBar = () => {
             {INDOOR_LINKS.map((option, index) => {
               return (
                 <li key={index} className={styles.option}>
-                  <label className={styles.checkContainer}>
-                    <input type="checkbox" disabled />
-                    <div className={styles.checkmark}></div>
-                  </label>
-                  <label>{option.text}</label>
+                  <button
+                    className={`${styles.optionBtn} ${
+                      selectedValues.includes(option.text)
+                        ? `${styles.selected}`
+                        : ""
+                    }`}
+                    disabled
+                  >
+                    {option.text}
+                  </button>
                 </li>
               );
             })}

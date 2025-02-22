@@ -6,12 +6,12 @@ const Gallery = async ({
   searchParams,
 }: {
   searchParams?: {
-    value?: string;
-    isOpen?: boolean;
+    value?: string[];
   };
 }) => {
-  // const selectedOption = searchParams?.value || "";
-  // const isOpen = searchParams?.isOpen || "";
+  const selectedOption = searchParams?.value || [];
+
+  console.log(selectedOption);
   return (
     <main>
       <NavbarImage wrapperClassName="header-wrapper">
