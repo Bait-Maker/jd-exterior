@@ -5,9 +5,11 @@ import styles from "./FilterBar.module.css";
 import { useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { OUTDOOR_OPTIONS, INDOOR_LINKS } from "@/lib/constants";
+import { IoIosClose } from "react-icons/io";
 
 const FilterBar = () => {
-  // TODO: change input checkboxes to buttons
+  // TODO: change filter option when clicked
+  // TODO: to show what option have already been selected
 
   const [isOpen, setIsOpen] = useState(false);
   const [selectedValues, setSelectedValues] = useState<string[]>([]);
@@ -30,6 +32,11 @@ const FilterBar = () => {
   }
 
   function handleFilter(values: string[]) {
+    if (values.length < 1) {
+      alert("Cannot filter selected options");
+      return;
+    }
+
     const firstvalue = "value=";
 
     let stringURL = values.join("&value=");
@@ -44,8 +51,18 @@ const FilterBar = () => {
     setSelectedValues([]);
   }
 
+  function handleSingleClear(value: string) {
+    if (selectedURLValues.length === 1) {
+      handleClear();
+      return;
+    }
+
+    handleFilter(selectedURLValues.filter((curr) => curr !== value));
+    handleSelect(value);
+  }
+
   console.log(selectedURLValues);
-  console.log(selectedValues);
+  // console.log(selectedValues);
   console.log(pathname);
 
   return (
@@ -55,6 +72,22 @@ const FilterBar = () => {
       </button>
 
       <span className={styles.divider} />
+
+      <div className={styles.chipContainer}>
+        {selectedURLValues &&
+          selectedURLValues.map((val, index) => {
+            return (
+              <button
+                key={index}
+                onClick={() => handleSingleClear(val)}
+                className={styles.filterChip}
+              >
+                <span>{val.charAt(0).toUpperCase() + val.slice(1)}</span>{" "}
+                <IoIosClose />
+              </button>
+            );
+          })}
+      </div>
 
       <div
         className={`${styles.checkboxContainer} ${isOpen ? styles.show : ""}`}
@@ -69,7 +102,7 @@ const FilterBar = () => {
                   <button
                     onClick={() => handleSelect(option.value)}
                     className={`${styles.optionBtn} ${
-                      selectedURLValues.includes(option.value)
+                      selectedValues.includes(option.value)
                         ? `${styles.selected}`
                         : ""
                     }`}
@@ -77,23 +110,6 @@ const FilterBar = () => {
                   >
                     {option.label}
                   </button>
-                  {/* <label className={styles.checkContainer}>
-                    {selectedURLValues.includes(option.value) ? (
-                      <input
-                        type="checkbox"
-                        onChange={() => handleSelect(option.value)}
-                        checked
-                      />
-                    ) : (
-                      <input
-                        type="checkbox"
-                        onChange={() => handleSelect(option.value)}
-                      />
-                    )}
-
-                    <div className={styles.checkmark}></div>
-                  </label>
-                  <label>{option.label}</label> */}
                 </li>
               );
             })}
@@ -128,7 +144,10 @@ const FilterBar = () => {
             Clear
           </button>
           <button
-            onClick={() => handleFilter(selectedValues)}
+            onClick={() => {
+              handleFilter(selectedValues);
+              handleOpen();
+            }}
             className={styles.applyBtn}
           >
             Filter
