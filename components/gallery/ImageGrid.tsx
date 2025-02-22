@@ -1,36 +1,49 @@
-import { createSupabaseClient } from "@/lib/supabase/sever";
+"use client";
+
 import ImageCard from "./image-card/ImageCard";
 import styles from "./ImageGrid.module.css";
+import { StaticImageData } from "next/image";
+import { Key, useEffect, useState } from "react";
 
 type Props = {
-  searchValue?: string;
+  searchValues?: string[];
+  images?: any[] | null;
 };
 
-const ImageGrid = async ({ searchValue }: Props) => {
-  const response = await createSupabaseClient();
+const ImageGrid = ({ searchValues, images }: Props) => {
+  const [filteredImages, setFilteredImages] = useState<any>();
 
-  let { data: images } = await response.from("gallery-images").select("*");
-
-  if (searchValue) {
-    ({ data: images } = await response
-      .from("gallery-images")
-      .select()
-      .eq("category", searchValue));
-  }
-
-  JSON.stringify(images);
+  useEffect(() => {
+    function filterImages() {
+      if (images && searchValues && searchValues.length >= 1) {
+        setFilteredImages(
+          images.filter((curr: { category: string }) =>
+            searchValues.includes(curr.category)
+          )
+        );
+      } else {
+        setFilteredImages(images);
+      }
+    }
+    filterImages();
+  }, [searchValues]);
 
   return (
     <section className={styles.wrapper}>
       <ul className={styles.cardList}>
-        {images &&
-          images.map((image) => {
-            return (
-              <li key={image.id} className={styles.card}>
-                <ImageCard src={image.src} />
-              </li>
-            );
-          })}
+        {filteredImages &&
+          filteredImages.map(
+            (image: {
+              id: Key | null | undefined;
+              src: string | StaticImageData;
+            }) => {
+              return (
+                <li key={image.id} className={styles.card}>
+                  <ImageCard src={image.src} />
+                </li>
+              );
+            }
+          )}
       </ul>
     </section>
   );

@@ -1,17 +1,20 @@
 import ImageGrid from "@/components/gallery/ImageGrid";
 import PhotoGallery from "@/components/gallery/PhotoGallery";
 import NavbarImage from "@/components/util/navbar-image/NavbarImage";
+import { createSupabaseClient } from "@/lib/supabase/sever";
 
-const Gallery = async ({
-  searchParams,
-}: {
-  searchParams?: {
+const Gallery = async (props: {
+  searchParams?: Promise<{
     value?: string[];
-  };
+  }>;
 }) => {
+  const searchParams = await props.searchParams;
   const selectedOption = searchParams?.value || [];
 
-  console.log(selectedOption);
+  const response = await createSupabaseClient();
+
+  let { data: images } = await response.from("gallery-images").select("*");
+
   return (
     <main>
       <NavbarImage wrapperClassName="header-wrapper">
@@ -20,6 +23,7 @@ const Gallery = async ({
         </div>
       </NavbarImage>
       <PhotoGallery />
+      <ImageGrid searchValues={selectedOption} images={images} />
     </main>
   );
 };
