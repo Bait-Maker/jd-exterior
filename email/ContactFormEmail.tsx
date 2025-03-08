@@ -13,12 +13,13 @@ import {
 import styles from "./ContactFormEmail.module.css";
 
 type Props = {
+  name: string;
   message: string;
   phone: string;
   email: string;
 };
 
-const ContactFormEmail = ({ message, phone, email }: Props) => {
+const ContactFormEmail = ({ name, message, phone, email }: Props) => {
   return (
     <Html>
       <Head />
@@ -37,7 +38,8 @@ const ContactFormEmail = ({ message, phone, email }: Props) => {
             <Heading style={{ lineHeight: "1.25" }}>
               You recieved the following message from the contact form
             </Heading>
-            <Text>{message}</Text>
+            <Text>From: {name}</Text>
+            <Text>Message: {message}</Text>
             <Hr />
             <Text>Sender's phone number: {phone}</Text>
             <Text>Sender's email: {email} </Text>
