@@ -53,7 +53,7 @@ const MobileMenuLink = ({
             e.stopPropagation();
             setMenuOpen(false);
           }}
-          href="#"
+          href={href}
           className={styles.container}
         >
           <span>{children}</span>
