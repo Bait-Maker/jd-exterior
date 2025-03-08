@@ -105,7 +105,7 @@ const ImageGrid = ({ searchValues, images }: Props) => {
             )}
         </ul>
         {filteredImages && filteredImages.length < 1 && (
-          <h1>No imagees added yet...</h1>
+          <h1>No images added yet...</h1>
         )}
       </section>
       <Modal ref={modalRef}>

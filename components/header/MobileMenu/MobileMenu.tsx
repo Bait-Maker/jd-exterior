@@ -60,7 +60,11 @@ const MobileMenu = () => {
             </div>
 
             <div className={styles.bottomMenuContainer}>
-              <ContactButton className={styles.contactButton}>
+              <ContactButton
+                href="/#contact"
+                onClick={() => setOpen(false)}
+                className={styles.contactButton}
+              >
                 <span className={styles.buttonText}>Contact Us</span>
               </ContactButton>
             </div>
