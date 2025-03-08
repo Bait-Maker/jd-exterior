@@ -1,5 +1,4 @@
 .navContainer {
-    position: sticky;
     padding: 5vw 5vw 0 5vw;
     background-color: var(--background-light);
 }

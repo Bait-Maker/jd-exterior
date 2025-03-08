@@ -4,51 +4,53 @@ import ProsectDeckThumbnail from "@/assets/Prospect-deck-main.jpg";
 import GlenviewThumbnail from "@/assets/redDoor-main.jpg";
 import StCharlesThumbnail from "@/assets/stCharles-main.jpg";
 
+const path = "/gallery?value=";
+
 export const OUTDOOR_LINKS = [
   {
     text: "Doors",
-    href: "#",
+    href: `${path}doors`,
   },
   {
     text: "Gazebos",
-    href: "#",
+    href: `${path}gazebos`,
   },
   {
     text: "Gutters",
-    href: "#",
+    href: `${path}gutters`,
   },
   {
     text: "Roofing",
-    href: "#",
+    href: `${path}roofing`,
   },
   {
     text: "Siding",
-    href: "#",
+    href: `${path}siding`,
   },
   {
     text: "Skylights",
-    href: "#",
+    href: `${path}skylights`,
   },
   {
     text: "Windows",
-    href: "#",
+    href: `${path}windows`,
   },
 ];
 
 export const OUTDOOR_OPTIONS = [
   { value: "copper", label: "Copper" },
   { value: "deck", label: "Deck" },
-  { value: "door", label: "Door" },
+  { value: "doors", label: "Doors" },
   { value: "dormer", label: "Dormer" },
   { value: "fascia", label: "Fascia" },
   { value: "fence", label: "Fence" },
   { value: "flooring", label: "Flooring" },
-  { value: "gazebo", label: "Gazebo" },
+  { value: "gazebos", label: "Gazebos" },
   { value: "garage", label: "Garage" },
-  { value: "gutter", label: "Gutters" },
+  { value: "gutters", label: "Gutters" },
   { value: "siding", label: "Siding" },
   { value: "soffit", label: "Soffit" },
-  { value: "skylight", label: "Skylights" },
+  { value: "skylights", label: "Skylights" },
   { value: "painting", label: "Painting" },
   { value: "roofing", label: "Roofing" },
   { value: "windows", label: "Windows" },

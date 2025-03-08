@@ -1,7 +1,4 @@
-import ImageGrid from "./ImageGrid";
-import { OUTDOOR_OPTIONS } from "@/lib/constants";
 import styles from "./PhotoGallery.module.css";
-import Link from "next/link";
 import FilterBar from "./filterbar/FilterBar";
 
 const PhotoGallery = () => {

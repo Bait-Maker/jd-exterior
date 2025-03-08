@@ -1,5 +1,6 @@
 .footer {
-    padding: 7.5rem 5vw 2.5rem 5vw;
+    /* padding: 7.5rem 5vw 2.5rem 5vw; */
+    padding: 4rem;
     background-color: var(--foreground);
 }
 
@@ -17,6 +18,7 @@
 
 .logoDiv {
     width: 16.66667%;
+    padding-bottom: 2rem;
 }
 
 .navDiv {
@@ -73,11 +75,18 @@
     min-width: 0;
     width: 100%;
     flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .copyright {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-wrap: balance;
+    gap: 0.5rem;
+    text-align: center;
 }
 
 .copyright li {
@@ -129,7 +138,8 @@
 
 .secret {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    padding-top: 1rem;
 }
 
 .secret a,
@@ -182,6 +192,15 @@
     .cell {
         width: auto;
         /* flex: 1 1 auto; */
+        justify-content: flex-start;
+    }
+
+    .copyright {
+        flex-direction: row;
+    }
+
+    .secret {
+        justify-content: flex-end;
     }
 
     .footerBottom {
