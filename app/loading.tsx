@@ -1,7 +1,7 @@
-import Loading from "@/components/loading/Loading";
+import Spinner from "@/components/loading/Spinner";
 
 const DataLoadingPage = () => {
-  return <Loading />;
+  return <Spinner />;
 };
 
 export default DataLoadingPage;

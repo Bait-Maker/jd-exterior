@@ -1,4 +1,4 @@
-import styles from "./loading.module.css";
+import styles from "./Spinner.module.css";
 
 const Loading = () => {
   return (
