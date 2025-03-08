@@ -17,7 +17,7 @@ export default function HeaderContextProvider({
   const [scrolled, setScrolled] = useState(false);
 
   function updateScroll(latest: number) {
-    setScrolled(latest > 250 ? true : false);
+    setScrolled(latest > 100 ? true : false);
   }
 
   const headerContext = {

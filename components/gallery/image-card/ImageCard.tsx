@@ -9,7 +9,7 @@ type Props = {
 //TODO: FIX cards
 const ImageCard = ({ src }: Props) => {
   return (
-    <Link href="#" className={styles.cardContainer}>
+    <Link href={src.toString()} target="blank" className={styles.cardContainer}>
       <div className={styles.imageContainer}>
         <Image
           alt=""

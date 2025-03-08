@@ -1,0 +1,192 @@
+.form {
+    width: 100%;
+    height: max-content;
+    background-color: var(--primary-content);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .form label,
+.form button,
+.form select {
+    width: 50%;
+} */
+
+.dropzone {
+    width: 100%;
+    padding: 4rem;
+    margin-top: 2.5rem;
+    border: 2px dashed var(--primary);
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.textContainer svg {
+    font-size: var(--font-28px);
+    fill: var(--primary-dark);
+    opacity: 0.8;
+}
+
+.title {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--copy-light);
+    padding-bottom: 0.5rem;
+}
+
+.rejected {
+    margin-top: 4rem;
+}
+
+.grid {
+    display: grid;
+    margin-top: 1.5rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2.5rem;
+}
+
+.file {
+    position: relative;
+    height: 8rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* rejected files */
+
+.flex {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.rejectedFile {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.errors {
+    font-size: var(--font-14px);
+    color: var(--error);
+}
+
+.remove {
+    padding: 0.5rem;
+    font-family: "Montserrat";
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: 1px solid var(--error);
+    background-color: var(--primary-content);
+    cursor: pointer;
+    transition: color 200ms ease-out;
+}
+
+.remove:hover {
+    background-color: var(--error);
+    color: var(--primary-content);
+}
+
+/* end rejected files */
+
+.removeBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -0.75rem;
+    right: -0.75rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 1px solid var(--error);
+    background-color: var(--error);
+    color: var(--primary-content);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: color 200ms ease-in-out;
+}
+
+.removeBtn:hover {
+    background-color: var(--primary-content);
+    color: var(--error);
+}
+
+.filetxt {
+    margin-top: 0.5rem;
+    font-size: var(--font-12px);
+    font-weight: 500;
+}
+
+.uploadContainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.uploadContainer button {
+    padding: 0.5rem;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: var(--font-14px);
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: color 200ms ease-out;
+}
+
+.cancelBtn {
+    border: 1px solid var(--error);
+    background-color: var(--primary-content);
+}
+
+.uploadBtn {
+    border: 1px solid var(--primary);
+    background-color: var(--primary-content);
+}
+
+.cancelBtn:hover {
+    background-color: var(--error);
+    color: var(--primary-content);
+}
+
+.uploadBtn:hover {
+    background-color: var(--primary);
+    color: var(--primary-content);
+}
+
+@media (min-width: 640px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+}

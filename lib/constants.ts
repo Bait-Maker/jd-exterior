@@ -51,7 +51,7 @@ export const OUTDOOR_OPTIONS = [
   { value: "skylight", label: "Skylights" },
   { value: "painting", label: "Painting" },
   { value: "roofing", label: "Roofing" },
-  { value: "window", label: "Windows" },
+  { value: "windows", label: "Windows" },
 ];
 
 export const INDOOR_LINKS = [

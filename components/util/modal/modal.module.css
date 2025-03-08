@@ -6,6 +6,7 @@
     left: 0;
     padding: 20px 10px;
     z-index: 99;
+    overflow-y: scroll;
 }
 
 .modalBackdrop {
@@ -36,7 +37,7 @@
     padding: 2.5rem 2.5rem 0 0;
     background: transparent;
     border: transparent;
-    color: var(--primary-content);
+    color: var(--error);
     font-size: var(--font-64px);
     cursor: pointer;
     z-index: 102;

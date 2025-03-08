@@ -1,0 +1,17 @@
+.addBtn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0.5rem;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: var(--font-16px);
+    background-color: var(--success);
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addBtn:hover {
+    background-color: #34e934;
+}

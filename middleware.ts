@@ -11,7 +11,7 @@ export async function middleware(request: NextRequest) {
   const path = new URL(request.url).pathname;
 
   const protectedRoutes = ["/protected"];
-  const authRoutes = ["/login", "/create-account"];
+  const authRoutes = ["/admin-login", "/create-account"];
 
   const isProtectedRoute = protectedRoutes.includes(path);
   const isAuthRoute = authRoutes.includes(path);
