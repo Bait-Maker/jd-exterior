@@ -60,6 +60,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--hsl-background);
   min-height: 100vh;

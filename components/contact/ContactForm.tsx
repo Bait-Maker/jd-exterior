@@ -46,7 +46,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className={styles.section}>
+    <section id="contact" className={styles.section}>
       <div className={styles.formContainer}>
         <form className={styles.form} action={clientAction}>
           <div className={styles.formHeading}>

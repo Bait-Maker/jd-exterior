@@ -48,6 +48,7 @@ export const OUTDOOR_OPTIONS = [
   { value: "gazebos", label: "Gazebos" },
   { value: "garage", label: "Garage" },
   { value: "gutters", label: "Gutters" },
+  { value: "portico", label: "Portico" },
   { value: "siding", label: "Siding" },
   { value: "soffit", label: "Soffit" },
   { value: "skylights", label: "Skylights" },

@@ -5,15 +5,20 @@ import styles from "./ContactButton.module.css";
 type Props = {
   children: React.ReactNode;
   className?: string;
+  href?: string;
 
   //? All other props
   [x: string]: any;
 };
 
-const ContactButton = ({ children, className, ...props }: Props) => {
+const ContactButton = ({ children, className, href, ...props }: Props) => {
   return (
     <div>
-      <Link href={"#"} className={`${styles.link} ${className}`} {...props}>
+      <Link
+        href={href ? href : "#"}
+        className={`${styles.link} ${className}`}
+        {...props}
+      >
         {children}
       </Link>
     </div>

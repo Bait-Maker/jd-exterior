@@ -25,7 +25,7 @@ const Footer = () => {
     return link.text === "About";
   });
 
-  secondColumn.push({ text: "Contact", href: "#" });
+  secondColumn.push({ text: "Contact", href: "/#contact" });
 
   const handleSignOut = () => {
     startTransition(async () => {

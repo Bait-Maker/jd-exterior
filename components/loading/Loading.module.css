@@ -1,5 +1,11 @@
-/* From Uiverse.io by AqFox */
+.container {
+    position: relative;
+}
+
 .spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 56px;
     height: 56px;
     border: 11px var(--primary) double;

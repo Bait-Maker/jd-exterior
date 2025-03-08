@@ -34,6 +34,8 @@ const FlyoutNav = () => {
           <Links />
 
           <ContactButton
+            href="/#contact"
+            scroll={true}
             className={`${
               scrolled ? `${styles.contactButtonScrolled}` : undefined
             }`}
