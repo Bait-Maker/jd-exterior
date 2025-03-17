@@ -15,6 +15,14 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "J.D. Exterior",
   description: "Building Quality Siding, Windows, Doors, & More.",
+  keywords: [
+    "Siding",
+    "Windows",
+    "Doors",
+    "Roofing",
+    "Service",
+    "Construction",
+  ],
 };
 
 export default function RootLayout({
