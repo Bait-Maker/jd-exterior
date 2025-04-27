@@ -26,7 +26,7 @@ const Hero = () => {
 
           <h1 className={styles.title}>
             Quality Siding, Windows, Doors, <br /> Gutters, Skylights, Decking,
-            Roof, <br /> & More.
+            Roofing, <br /> & More.
           </h1>
 
           <button className={styles.button} onClick={handleOpen}>
