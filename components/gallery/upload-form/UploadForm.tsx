@@ -66,7 +66,7 @@ const UploadForm = () => {
     accept: {
       "image/*": [],
     },
-    maxSize: 1024 * 2000, // 2.048 MB
+    maxSize: 1024 * 10000, // 10.24 MB
   });
 
   useEffect(() => {

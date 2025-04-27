@@ -14,7 +14,8 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "J.D. Exterior",
-  description: "Building Quality Siding, Windows, Doors, & More.",
+  description:
+    "Building Quality Windows, Doors, Siding, Roofing, Deck, Gutters & More.",
   keywords: [
     "Siding",
     "Windows",
